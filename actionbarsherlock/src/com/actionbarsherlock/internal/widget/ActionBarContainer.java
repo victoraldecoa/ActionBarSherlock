@@ -53,7 +53,7 @@ public class ActionBarContainer extends NineFrameLayout {
     public ActionBarContainer(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        setBackgroundDrawable(null);
+        setBackground(null);
 
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.SherlockActionBar);

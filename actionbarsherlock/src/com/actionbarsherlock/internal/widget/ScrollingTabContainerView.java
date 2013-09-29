@@ -277,7 +277,7 @@ public class ScrollingTabContainerView extends NineHorizontalScrollView
         tabView.init(this, tab, forAdapter);
 
         if (forAdapter) {
-            tabView.setBackgroundDrawable(null);
+            tabView.setBackground(null);
             tabView.setLayoutParams(new ListView.LayoutParams(ListView.LayoutParams.MATCH_PARENT,
                     mContentHeight));
         } else {

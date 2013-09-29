@@ -83,7 +83,7 @@ public class ListMenuItemView extends LinearLayout implements MenuView.ItemView 
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        setBackgroundDrawable(mBackground);
+        setBackground(mBackground);
 
         mTitleView = (TextView) findViewById(R.id.abs__title);
         if (mTextAppearance != -1) {

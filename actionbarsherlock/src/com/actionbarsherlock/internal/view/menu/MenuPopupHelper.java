@@ -120,7 +120,7 @@ public class MenuPopupHelper implements AdapterView.OnItemClickListener, View.On
                 ViewTreeObserver vto = anchor.getViewTreeObserver();
                 if (vto != mTreeObserver) {
                     if (mTreeObserver != null && mTreeObserver.isAlive()) {
-                        mTreeObserver.removeGlobalOnLayoutListener(this);
+                    	mTreeObserver.removeOnGlobalLayoutListener(this);
                     }
                     if ((mTreeObserver = vto) != null) {
                         vto.addOnGlobalLayoutListener(this);
@@ -151,7 +151,7 @@ public class MenuPopupHelper implements AdapterView.OnItemClickListener, View.On
         mPopup = null;
         mMenu.close();
         if (mTreeObserver != null) {
-            if (mTreeObserver.isAlive()) mTreeObserver.removeGlobalOnLayoutListener(this);
+            if (mTreeObserver.isAlive()) mTreeObserver.removeOnGlobalLayoutListener(this);
             mTreeObserver = null;
         } else if (mAnchorView instanceof View_HasStateListenerSupport) {
             ((View_HasStateListenerSupport) mAnchorView).removeOnAttachStateChangeListener(this);
